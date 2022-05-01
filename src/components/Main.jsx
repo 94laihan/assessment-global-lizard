@@ -16,6 +16,10 @@ export default function Main() {
    const [curPage, setCurPage] = useState(1);
    const [postsPerPage] = useState(4);
  
+   //#1. Get a list from json to store post, use as original list (postList)
+   //#2. Get a list copy from postList, use as filter list (filteredPostList)
+   //#3. Construct a list based on category (categoriesList)
+   //#4. Construct a boolean list to record selected category (checkedState)
    useEffect(() =>{
      fetch('api/posts')
        .then((res) => res.json())
